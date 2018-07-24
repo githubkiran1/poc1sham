@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title *ngIf="profiledata">{{profiledata.fname}}'s Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid  *ngIf="profiledata"> 
+    <ion-item>
+      <ion-label color="primary" stacked>First Name</ion-label>
+      <ion-input type="text" value="{{profiledata.fname}}"></ion-input>  
+    </ion-item>        
+
+    <ion-item>
+      <ion-label color="primary" stacked>Last Name</ion-label>
+      <ion-input type="text" value="{{profiledata.lname}}"></ion-input>  
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Login Type</ion-label>
+      <ion-input type="text" value="{{profiledata.logintype}}" disabled></ion-input>  
+    </ion-item>    
+
+    <ion-item>
+      <ion-label color="primary" stacked>My Interests</ion-label>
+    </ion-item>
+
+    <ion-row>
+      <ion-col col-sm-6 col-md-3 *ngFor="let category of categories">
+        <ion-item>
+          <ion-label>{{category.name}}</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="category.checked"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>  
+
+   
+</ion-grid>
+</ion-content>
+
+<ion-footer justify-content-center>
+  <ion-toolbar>
+    <button ion-button color="secondary" (click)="update()">Update</button>
+    <button ion-button color="secondary" (click)="cancel()">Cancel</button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,27 @@
+{
+	"status" : {
+		"code" : 200,
+		"description" : ""
+	},
+	"contents" : {
+		"profileid" : 1,	
+	  	"fname" : "Venkata",
+	  	"lname" : "Nidumukkala",
+	  	"logintype" : "facebook",
+	  	"deviceid" : "",
+	  	"categoryinterests" : [{
+	  		"code" : "",
+	  		"name" : "",
+	  		"checked" : false
+	  	}],
+	  	"predictioninfo" : {
+	  		"total" : 0,
+	  		"success" : 0,
+	  		"failure" : 0
+	  	},
+	  	"profilemeter" : {
+	  		"followers" : 0,
+	  		"likes" : 0
+	  	}
+	}
+}

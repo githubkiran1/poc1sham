@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title  *ngIf="userdata" >Welcome '{{userdata.fname}}'</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<div *ngIf = "pagecontent" >
+
+    <ion-card (click)="goToProfile()">
+      <ion-card-header>
+          {{pagecontent.profilebrief.cardtitle}}
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item *ngFor="let item of pagecontent.profilebrief.carddata">
+          {{item.title}}
+          <ion-icon name="{{item.icon}}" item-start></ion-icon>
+          <ion-badge item-end>{{item.value}}</ion-badge>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <div *ngIf="pagecontent.welcomesections.show == true">
+      <div padding>
+        <ion-segment [(ngModel)]="quickheadercontent">
+          <ion-segment-button *ngFor="let segment of pagecontent.welcomesections.sectiondata" value="{{segment.code}}">
+            {{segment.headingtitle}}
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div [ngSwitch]="quickheadercontent">
+        <div *ngSwitchCase="'TOP5INURINTERESTS'">
+          <ion-slides pager>
+            <ion-slide *ngFor="let cardval of pagecontent.welcomesections.sectiondata[0].cardcontents">
+                <ion-card>
+                  <ion-card-header>
+                      {{cardval.cardtitle}}
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-item *ngFor="let item of cardval.carddata">
+                      <ion-icon name="{{item.icon}}" item-start></ion-icon>
+                      {{item.title}}
+                      <ion-badge item-end>{{item.value}}</ion-badge>
+                    </ion-item>
+                  </ion-card-content>
+                </ion-card>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <div *ngSwitchCase="'ALLTRENDING'">  
+          <ion-grid>
+            <ion-row nowrap>
+              <ion-col *ngFor="let cardval of pagecontent.welcomesections.sectiondata[1].cardcontents">
+                  <ion-card>
+                    <ion-card-header>
+                        {{cardval.cardtitle}}
+                    </ion-card-header>
+                    <ion-card-content>
+                      <ion-item *ngFor="let item of cardval.carddata">
+                        <ion-icon name="{{item.icon}}" item-start></ion-icon>
+                        {{item.title}}
+                        <ion-badge item-end>{{item.value}}</ion-badge>
+                      </ion-item>
+                    </ion-card-content>
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+
+
+<ion-list *ngFor="let sectionval of pagecontent.othersections">
+  <ion-list-header>
+    {{sectionval.headingtitle}}
+  </ion-list-header>
+
+  <ion-grid *ngIf="sectionval.displaytype == 'singlerow'">
+    <ion-row>
+      <ion-col *ngFor="let cardval of sectionval.cardcontents">
+        <ion-card>
+          <ion-card-header>
+              {{cardval.cardtitle}}
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item *ngFor="let item of cardval.carddata">
+              <ion-icon name="{{item.icon}}" item-start></ion-icon>
+              {{item.title}}
+              <ion-badge item-end>{{item.value}}</ion-badge>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>            
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-list>
+
+</div>
+</ion-content>

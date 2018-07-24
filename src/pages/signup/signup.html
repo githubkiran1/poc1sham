@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-row>
+  		<ion-col item-start>
+        	<ion-title>Registration</ion-title>
+  		</ion-col>
+  	</ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+	<ion-label color="primary" stacked>Login Type</ion-label>
+	<ion-select color="primary" [(ngModel)]="signupuser.logintype">
+	  <ion-option *ngFor="let logintype of logintypes" [value]="logintype.code"><ion-icon name="logo-linkedin"></ion-icon> {{logintype.name}}</ion-option>	
+	</ion-select>	
+</ion-item>
+
+<ion-item>
+	<ion-label color="primary" stacked>Device Id</ion-label>
+	<ion-input type="text" name="title"  [(ngModel)]="signupuser.deviceid"></ion-input>
+</ion-item>
+
+<ion-item>
+	<ion-label color="primary" stacked>My Interests</ion-label>
+</ion-item>
+
+<ion-row>
+  <ion-col col-sm-6 col-md-3 *ngFor="let category of categories">
+    <ion-item>
+      <ion-label>{{category.name}}</ion-label>
+      <ion-checkbox color="primary" [(ngModel)]="category.checked"></ion-checkbox>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="secondary" (click)="register()">Register</button>
+    <button ion-button color="secondary" (click)="cancel()">Cancel</button>
+  </ion-toolbar>
+</ion-footer>

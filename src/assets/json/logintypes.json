@@ -1,0 +1,20 @@
+{
+	"status" : {
+		"code" : 200,
+		"description" : ""
+	},
+	"contents" : [
+		{
+			"code" : "facebook",
+			"name" : "Facebook"
+		},
+		{
+			"code" : "googleplus",
+			"name" : "Google Plus"
+		},
+		{
+			"code" : "twitter",
+			"name" : "Twitter"
+		}
+	]
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align-items-center>Choose Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Choose Login Type!</h2>
+  
+<ion-list radio-group [(ngModel)]="relationship">
+  <ion-item>
+    <ion-label>Facebook</ion-label>
+    <ion-radio value="facebook"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Twitter</ion-label>
+    <ion-radio value="twitter"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Gmail</ion-label>
+    <ion-radio value="gmail"></ion-radio>
+  </ion-item>
+</ion-list>
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar  align-items-center >
+    <button ion-button round color="danger" (click)="cancel()">Cancel</button>
+    <button ion-button round color="primary" (click)="proceed()">Proceed</button>
+  </ion-toolbar>
+</ion-footer>

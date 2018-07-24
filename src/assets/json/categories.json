@@ -1,0 +1,28 @@
+{
+	"status" : {
+		"code" : 200,
+		"description" : ""
+	},
+	"contents" : [
+		{
+			"code" : "news",
+			"name" : "News",
+			"checked" : false
+		},
+		{
+			"code" : "business",
+			"name" : "Business",
+			"checked" : false
+		},
+		{
+			"code" : "social",
+			"name" : "Social",
+			"checked" : false
+		},
+		{
+			"code" : "others",
+			"name" : "Others",
+			"checked" : false
+		}
+	]
+}

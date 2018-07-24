@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Predictions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding *ngIf="mylistinfo" >
+  	
+  	
+  	<h4>!!!!! your predictions !!!!</h4>
+
+<!-- https://valor-software.com/ng2-charts/ -->
+  <div style="display: block">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+  </div>
+
+
+  <ion-list *ngFor="let timeline of mylistinfo.timelinedetails">
+    <ion-list-header>
+      <ion-item>
+        {{timeline.year}}
+        <ion-badge item-end>{{timeline.count}}</ion-badge>
+      </ion-item>
+    </ion-list-header>
+    <ion-item *ngFor="let item of timeline.postsdata">
+      <ion-icon name="{{item.icon}}" item-start></ion-icon>
+      <h3>{{item.title}}</h3>
+      <p>{{item.description}}.</p>
+      <ion-icon name="people" item-end></ion-icon>
+      <ion-badge item-end>{{item.targetdetails.followers}}</ion-badge>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

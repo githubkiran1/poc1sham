@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>New Prediction</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  	
+  	<form [formGroup]="predictionFrm">
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Title</ion-label>
+		  <ion-input type="text" name="title" formControlName="title"></ion-input>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Type</ion-label>
+		  <ion-select formControlName="type">
+		    <ion-option value="public">Public</ion-option>
+		    <ion-option value="private">Private</ion-option>
+		  </ion-select>
+		</ion-item>		
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Category</ion-label>
+		  <ion-select formControlName="category">
+		    <ion-option  *ngFor="let category of categories" [value]="category.code">{{category.name}}</ion-option>
+		  </ion-select>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Sub-Category</ion-label>
+		  <ion-select>
+		    <ion-option value="1A">Social</ion-option>
+		    <ion-option value="2A">Business</ion-option>
+		  </ion-select>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Evaluate By</ion-label>
+		  <ion-datetime displayFormat="DD-MMM-YYYY"></ion-datetime>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Grace(days)</ion-label>
+		  <ion-input type="text" name="Grace(days)"></ion-input>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Reference URL</ion-label>
+		  <ion-input type="text" name="ReferenceUrl"></ion-input>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label color="primary" stacked>Attachment</ion-label>
+		  <ion-input type="text" name="Attachment"></ion-input>
+		</ion-item>
+
+	</form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button color="secondary" (click)="draft()">Draft</button>
+    <button ion-button color="secondary" [disabled]="!predictionFrm.valid" (click)="publish()">Publish</button>
+    <button ion-button color="secondary" (click)="cancel()">Cancel</button>
+  </ion-toolbar>
+</ion-footer>

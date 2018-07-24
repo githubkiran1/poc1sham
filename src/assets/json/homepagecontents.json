@@ -1,0 +1,283 @@
+{
+	"status" : {
+		"code" : 200,
+		"description" : "OK"
+	},
+	"contents" : {
+		"profilebrief" : {
+			"cardtitle" : "Your Profile Quick View",
+			"carddata" : [
+				{
+				"title" : "Followers To You",
+				"value" : "200K",
+				"icon" : "people"
+				},
+				{
+				"title" : "You follow",
+				"value" : "20",
+				"icon" : "walk"
+				},
+				{
+				"title" : "Posts",
+				"value" : "20",
+				"icon" : "flag"
+				},
+				{
+				"title" : "Success Rate",
+				"value" : "80%",
+				"icon" : "trending-up"
+				}
+			]
+		},
+
+		"welcomesections" : {
+			"show" : true,
+			"sectiondata" : [
+				{
+					"headingtitle" : "TOP 5 Posts For You",
+					"code" : "TOP5INURINTERESTS",
+					"displaytype" : "slider",
+					"cardcontents" : [
+						{
+							"cardtitle" : "Emirates will buy 200 more A380 !!!",
+							"cardtype" : "post",
+							"author" : "Mr ABC",
+							"carddata" : [
+								{
+									"title" : "Target By",
+									"value" : "20-Jan-2019",
+									"icon" : "switch"
+								},
+								{
+									"title" : "Followed By",
+									"value" : "100k",
+									"icon" : "people"
+								}
+							]
+						},
+						{
+							"cardtitle" : "Ethihad will acquire business from Emirates by 2021 !!!",
+							"cardtype" : "post",
+							"author" : "Mr XXXXX",
+							"carddata" : [
+								{
+									"title" : "Target By",
+									"value" : "20-Jan-2021",
+									"icon" : "switch"
+								},
+								{
+									"title" : "Followed By",
+									"value" : "100k",
+									"icon" : "people"
+								}
+							]
+						}
+					]
+				},
+				{
+					"headingtitle" : "Trending Users",
+					"code" : "ALLTRENDING",
+					"displaytype" : "singlerow",
+					"cardcontents" : [
+						{
+							"cardtitle" : "Mr ABC",
+							"cardtype" : "user",
+							"carddata" : [
+								{
+									"title" : "Followers",
+									"value" : "100",
+									"icon" : "people"
+								},
+								{
+									"title" : "Posts",
+									"value" : "10",
+									"icon" : "flag"
+								},
+								{
+									"title" : "Success Rate",
+									"value" : "40%",
+									"icon" : "trending-up"
+								}
+							]
+						},
+						{
+							"cardtitle" : "Mr PQR",
+							"cardtype" : "user",
+							"carddata" : [
+								{
+									"title" : "Followers",
+									"value" : "100",
+									"icon" : "people"
+								},
+								{
+									"title" : "Posts",
+									"value" : "10",
+									"icon" : "flag"
+								},
+								{
+									"title" : "Success Rate",
+									"value" : "40%",
+									"icon" : "trending-up"
+								}
+							]
+						},
+						{
+							"cardtitle" : "Mr XYZ",
+							"cardtype" : "user",
+							"carddata" : [
+								{
+									"title" : "Followers",
+									"value" : "100",
+									"icon" : "people"
+								},
+								{
+									"title" : "Posts",
+									"value" : "10",
+									"icon" : "flag"
+								},
+								{
+									"title" : "Success Rate",
+									"value" : "40%",
+									"icon" : "trending-up"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+
+		"othersections" : [
+			{
+				"headingtitle" : "Recommended Posts For You",
+				"code" : "RECOMMENDED_POSTS",
+				"displaytype" : "singlerow",
+				"cardcontents" : [
+					{
+						"cardtitle" : "Google Users Switch to Hotmail !!",
+						"cardtype" : "post",
+						"author" : "Mr. PQR",
+						"carddata" : [
+							{
+								"title" : "Target By",
+								"value" : "20-Dec-2019",
+								"icon" : "switch"
+							},
+							{
+								"title" : "Followed By",
+								"value" : "200k",
+								"icon" : "people"
+							}
+						]
+					},
+					{
+						"cardtitle" : "Emirates will buy 200 more A380 !!!",
+						"cardtype" : "post",
+						"author" : "Mr. ABC",
+						"carddata" : [
+							{
+								"title" : "Target By",
+								"value" : "20-Jan-2019",
+								"icon" : "switch"
+							},
+							{
+								"title" : "Followed By",
+								"value" : "100k",
+								"icon" : "people"
+							}
+						]
+					},
+					{
+						"cardtitle" : "2019 T20 Worldcup will be for England !!!",
+						"cardtype" : "post",
+						"author" : "Mr. XXXX",
+						"carddata" : [
+							{
+								"title" : "Target By",
+								"value" : "20-Jun-2019",
+								"icon" : "switch"
+							},
+							{
+								"title" : "Followed By",
+								"value" : "2000K",
+								"icon" : "people"
+							}
+						]
+					}
+				]
+			},
+			{
+				"headingtitle" : "Users You Might Interested to Follow",
+				"code" : "RECOMMENDED_USERS",
+				"displaytype" : "singlerow",
+				"cardcontents" : [
+					{
+						"cardtitle" : "Mr ABC",
+						"cardtype" : "user",
+						"carddata" : [
+							{
+								"title" : "Followers",
+								"value" : "100",
+								"icon" : "people"
+							},
+							{
+								"title" : "Posts",
+								"value" : "10",
+								"icon" : "flag"
+							},
+							{
+								"title" : "Success Rate",
+								"value" : "40%",
+								"icon" : "trending-up"
+							}
+						]
+					},
+					{
+						"cardtitle" : "Mr XYZ",
+						"cardtype" : "user",
+						"carddata" : [
+							{
+								"title" : "Followers",
+								"value" : "100",
+								"icon" : "people"
+							},
+							{
+								"title" : "Posts",
+								"value" : "10",
+								"icon" : "flag"
+							},
+							{
+								"title" : "Success Rate",
+								"value" : "40%",
+								"icon" : "trending-up"
+							}
+						]
+					},
+					{
+						"cardtitle" : "Mr PQR",
+						"cardtype" : "user",
+						"carddata" : [
+							{
+								"title" : "Followers",
+								"value" : "100",
+								"icon" : "people"
+							},
+							{
+								"title" : "Posts",
+								"value" : "10",
+								"icon" : "flag"
+							},
+							{
+								"title" : "Success Rate",
+								"value" : "40%",
+								"icon" : "trending-up"
+							}
+						]
+					}
+				]
+			}
+		]
+
+	}
+	
+}
